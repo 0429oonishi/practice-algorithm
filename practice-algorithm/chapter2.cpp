@@ -29,3 +29,15 @@ int main() {
     }
     cout << min_dist << endl;
 }
+
+bool is_prime(int N) {
+    if (N <= 1) {
+        return false;
+    }
+    for (int p = 2; p * p < N; p++) {
+        if (N % p == 0) {
+            return false;
+        }
+    }
+    return true;
+}
