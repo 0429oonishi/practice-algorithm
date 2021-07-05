@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB2ECF0A267B1B3F007FA6FB /* chapter2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB2ECF08267B1B3F007FA6FB /* chapter2.cpp */; };
+		ABEB844C267CE3170044414B /* chapter3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABEB844B267CE3170044414B /* chapter3.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,7 @@
 		AB2ECEFD267B1AF4007FA6FB /* practice-algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "practice-algorithm"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB2ECF07267B1B19007FA6FB /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 		AB2ECF08267B1B3F007FA6FB /* chapter2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chapter2.cpp; sourceTree = "<group>"; };
+		ABEB844B267CE3170044414B /* chapter3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = chapter3.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				AB2ECF07267B1B19007FA6FB /* include */,
 				AB2ECF08267B1B3F007FA6FB /* chapter2.cpp */,
+				ABEB844B267CE3170044414B /* chapter3.cpp */,
 			);
 			path = "practice-algorithm";
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB2ECF0A267B1B3F007FA6FB /* chapter2.cpp in Sources */,
+				ABEB844C267CE3170044414B /* chapter3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +245,7 @@
 		AB2ECF05267B1AF4007FA6FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 242KS3V77L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -251,6 +256,7 @@
 		AB2ECF06267B1AF4007FA6FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 242KS3V77L;
 				ENABLE_HARDENED_RUNTIME = YES;

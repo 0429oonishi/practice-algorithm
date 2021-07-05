@@ -8,19 +8,15 @@
 #include "include/bits/stdc++.h"
 using namespace std;
 
+const int INF = 200000000;
 int main() {
-    int N, v;
-    cin >> N >> v;
+    int N;
+    cin >> N;
     vector<int> a(N);
+    for (int i = 0; i < N; i++) cin >> a[i];
+    int min_value = INF;
     for (int i = 0; i < N; i++) {
-        cin >> a[i];
+        if (a[i] < min_value) min_value = a[i];
     }
-    bool exist = false;
-    for (int i = 0; i < N; i++) {
-        if (a[i] == v) {
-            exist = true;
-        }
-    }
-    if (exist) cout << "YES" << endl;
-    else cout << "NO" << endl;
+    cout << min_value << endl;
 }
