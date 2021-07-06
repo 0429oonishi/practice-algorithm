@@ -8,15 +8,33 @@
 #include "include/bits/stdc++.h"
 using namespace std;
 
-const int INF = 200000000;
+const int INF = 100000;
 int main() {
-    int N;
-    cin >> N;
-    vector<int> a(N);
-    for (int i = 0; i < N; i++) cin >> a[i];
+    // 入力
+    int N, K;
+    cin >> N >> K;
+    vector<int> a(N), b(N);
+    for (int i = 0; i < N; i++) {
+        cin >> a[i];
+    }
+    for (int i = 0; i < N; i++) {
+        cin >> b[i];
+    }
+    
+    // 探索
     int min_value = INF;
     for (int i = 0; i < N; i++) {
-        if (a[i] < min_value) min_value = a[i];
+        for (int j = 0; j < N; j++) {
+            if (a[i] + b[j] < K) {
+                continue;
+            }
+            if (a[i] + b[j] < min_value) {
+                min_value = a[i] + b[j];
+            }
+        }
     }
+    
+    // 出力
     cout << min_value << endl;
 }
+
