@@ -8,33 +8,30 @@
 #include "include/bits/stdc++.h"
 using namespace std;
 
-const int INF = 100000;
 int main() {
     // 入力
-    int N, K;
-    cin >> N >> K;
-    vector<int> a(N), b(N);
+    int N, W;
+    cin >> N >> W;
+    vector<int> a(N);
     for (int i = 0; i < N; i++) {
         cin >> a[i];
     }
-    for (int i = 0; i < N; i++) {
-        cin >> b[i];
-    }
     
-    // 探索
-    int min_value = INF;
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {
-            if (a[i] + b[j] < K) {
-                continue;
-            }
-            if (a[i] + b[j] < min_value) {
-                min_value = a[i] + b[j];
+    bool exist = false;
+    for (int bit = 0; bit < (1 << N); bit++) {
+        int sum = 0;
+        for (int i = 0; i < N; i++) {
+            // i番目の要素a[i]に部分集合が含まれているかどうか
+            if (bit & (1 << i)) {
+                sum += a[i];
             }
         }
+        
+        if (sum == W) exist = true;
     }
     
     // 出力
-    cout << min_value << endl;
+    if (exist) cout << "YES" << endl;
+    else cout << "NO" << endl;
 }
 
